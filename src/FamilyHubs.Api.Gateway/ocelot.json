@@ -1,0 +1,375 @@
+{
+  "Routes": [
+    //General
+    {
+      "DownstreamPathTemplate": "/api/info",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5063 //use the Http Variant
+        }
+      ],
+      "UpstreamPathTemplate": "/api/info",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    //Organisations
+    {
+      "DownstreamPathTemplate": "/api/organisations",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5063 //use the Http Variant
+        }
+      ],
+      "UpstreamPathTemplate": "/api/organisations",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/organisations/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
+      "DownstreamPathTemplate": "/api/organisations/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5063 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/organisationAdminCode/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/organisationAdminCode/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5063 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/organisationsByAssociatedOrganisation",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/organisationsByAssociatedOrganisation",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5063 //use the Http Variant
+        }
+      ]
+    },
+    //Services
+    {
+      "UpstreamPathTemplate": "/api/services",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamPathTemplate": "/api/services",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5063 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/services/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
+      "DownstreamPathTemplate": "/api/services/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5063 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/servicesByOwnerReference/{ownerReferenceId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/servicesByOwnerReference/{ownerReferenceId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5063 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/organisationservices/{ownerReferenceId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/organisationservices/{ownerReferenceId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5063 //use the Http Variant
+        }
+      ]
+    },
+    //Locations
+    {
+      "UpstreamPathTemplate": "/api/locations",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamPathTemplate": "/api/locations",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5063 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/locations/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put" ],
+      "DownstreamPathTemplate": "/api/locations/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5063 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/organisationlocations/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/organisationlocations/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5063 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/servicelocations/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/servicelocations/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5063 //use the Http Variant
+        }
+      ]
+    },
+    //Taxonomy
+    {
+      "UpstreamPathTemplate": "/api/taxonomies",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamPathTemplate": "/api/taxonomies",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5063 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/taxonomies/{id}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamPathTemplate": "/api/taxonomies/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5063 //use the Http Variant
+        }
+      ]
+    },
+    //Referral
+    {
+      "UpstreamPathTemplate": "/events",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/events",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/referrals",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/referrals",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/referral/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/referral/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/referrals/{id}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamPathTemplate": "/api/referrals/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/referrals/{referrer}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/referrals/{referrer}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/referralsByReferrer/{referrerId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/referralsByReferrer/{referrerId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/organisationreferrals/{organisationId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/organisationreferrals/{organisationId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/referral/compositekeys",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/referral/compositekeys",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/status/{referralId}/{status}",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/status/{referralId}/{status}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/status/{referralId}/{status}/{reasonForDecliningSupport}",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/status/{referralId}/{status}/{reasonForDecliningSupport}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/statuses",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/statuses",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207 //use the Http Variant
+        }
+      ]
+    },
+    //Referral - User Accounts
+    {
+      "UpstreamPathTemplate": "/api/useraccounts",
+      "UpstreamHttpMethod": [ "Post", "Put" ],
+      "DownstreamPathTemplate": "/api/useraccounts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207 //use the Http Variant
+        }
+      ]
+    },
+    //
+    {
+      "UpstreamPathTemplate": "/api/useraccount",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/useraccount",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/useraccount/{id}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamPathTemplate": "/api/useraccount/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/useraccountsByOrganisationId/{organisationId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/useraccountsByOrganisationId/{organisationId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207 //use the Http Variant
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5192"
+  }
+}

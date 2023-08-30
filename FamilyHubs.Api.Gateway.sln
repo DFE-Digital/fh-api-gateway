@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34018.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8E44CD9E-9D15-4B15-A5DB-F5CA67850E9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2DCC46A6-9F61-4A43-879A-DCB419E109CB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FamilyHubs.Api.Gateway", "src\FamilyHubs.Api.Gateway\FamilyHubs.Api.Gateway.csproj", "{E518B1C6-65AE-4EA9-8659-A764189BBABE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E518B1C6-65AE-4EA9-8659-A764189BBABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E518B1C6-65AE-4EA9-8659-A764189BBABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E518B1C6-65AE-4EA9-8659-A764189BBABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E518B1C6-65AE-4EA9-8659-A764189BBABE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E518B1C6-65AE-4EA9-8659-A764189BBABE} = {8E44CD9E-9D15-4B15-A5DB-F5CA67850E9A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {09F26184-9CA1-4C09-B8C2-AE15E5068748}
+	EndGlobalSection
+EndGlobal
