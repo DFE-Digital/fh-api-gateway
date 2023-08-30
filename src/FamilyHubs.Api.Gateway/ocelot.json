@@ -1,0 +1,32 @@
+{
+  "Routes": [
+    {
+
+      "DownstreamPathTemplate": "/api/organisations",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5063 //use the Http Variant
+        }
+      ],
+      "UpstreamPathTemplate": "/api/organisations",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/organisations/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/organisations/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5063 //use the Http Variant
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5192"
+  }
+}
