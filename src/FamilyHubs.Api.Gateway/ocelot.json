@@ -10,7 +10,19 @@
           "Port": 5063 //use the Http Variant
         }
       ],
-      "UpstreamPathTemplate": "/api/info",
+      "UpstreamPathTemplate": "/api/servicedirectory-info",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/info",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207 //use the Http Variant
+        }
+      ],
+      "UpstreamPathTemplate": "/api/referral-info",
       "UpstreamHttpMethod": [ "Get" ]
     },
     //Organisations
@@ -76,6 +88,7 @@
       ]
     },
     {
+      "Key": "ServiceById",
       "UpstreamPathTemplate": "/api/services/{id}",
       "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
       "DownstreamPathTemplate": "/api/services/{id}",
@@ -211,6 +224,7 @@
       ]
     },
     {
+      "Key": "ReferralById",
       "UpstreamPathTemplate": "/api/referral/{id}",
       "UpstreamHttpMethod": [ "Get" ],
       "DownstreamPathTemplate": "/api/referral/{id}",
@@ -367,6 +381,16 @@
           "Port": 5207 //use the Http Variant
         }
       ]
+    }
+  ],
+  //Referal-Service Aggregator
+  "Aggregates": [
+    {
+      "RouteKeys": [
+        "ReferralById",
+        "ServiceById"
+      ],
+      "UpstreamPathTemplate": "/api/ReferralAndService/{id}"
     }
   ],
   "GlobalConfiguration": {

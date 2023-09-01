@@ -1,3 +1,4 @@
+using FamilyHubs.Api.Gateway.Aggregators;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 
@@ -8,11 +9,10 @@ builder.Configuration.SetBasePath(builder.Environment.ContentRootPath)
         .AddJsonFile("ocelot.json", optional: false, reloadOnChange: true)
         .AddEnvironmentVariables();
 
-builder.Services.AddOcelot(builder.Configuration);
+builder.Services.AddOcelot(builder.Configuration)
+    .AddSingletonDefinedAggregator<ReferralServiceAggregator>();
 
 var app = builder.Build();
 await app.UseOcelot();
-
-app.MapGet("/", () => "Api Gateway Running!");
 
 app.Run();
