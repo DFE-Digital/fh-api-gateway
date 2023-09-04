@@ -10,7 +10,31 @@
           "Port": 5063 //use the Http Variant
         }
       ],
-      "UpstreamPathTemplate": "/api/info",
+      "UpstreamPathTemplate": "/api/servicedirectory/info",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/info",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5207 //use the Http Variant
+        }
+      ],
+      "UpstreamPathTemplate": "/api/referral/info",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/info",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5074 //use the Http Variant
+        }
+      ],
+      "UpstreamPathTemplate": "/api/idam/info",
       "UpstreamHttpMethod": [ "Get" ]
     },
     //Organisations
@@ -331,7 +355,6 @@
         }
       ]
     },
-    //
     {
       "UpstreamPathTemplate": "/api/useraccount",
       "UpstreamHttpMethod": [ "Post" ],
@@ -365,6 +388,128 @@
         {
           "Host": "localhost",
           "Port": 5207 //use the Http Variant
+        }
+      ]
+    },
+    //Idams
+    {
+      "UpstreamPathTemplate": "/api/account",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "DownstreamPathTemplate": "/api/account",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5074 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/account/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/account/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5074 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/account/list",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/account/list",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5074 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/account/VcsProfessionalList",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/account/VcsProfessionalList",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5074 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/account/DeleteOrganisationAccounts",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "DownstreamPathTemplate": "/api/account/DeleteOrganisationAccounts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5074 //use the Http Variant
+        }
+      ]
+    },
+    //Account Claims
+    {
+      "UpstreamPathTemplate": "/api/AccountClaims/GetAccountClaimsByEmail",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/AccountClaims/GetAccountClaimsByEmail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5074 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/AccountClaims/AddClaim",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/AccountClaims/AddClaim",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5074 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/AccountClaims/UpdateClaim",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamPathTemplate": "/api/AccountClaims/UpdateClaim",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5074 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/AccountClaims/DeleteClaim",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "DownstreamPathTemplate": "/api/AccountClaims/DeleteClaim",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5074 //use the Http Variant
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/AccountClaims/DeleteAllClaim",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "DownstreamPathTemplate": "/api/AccountClaims/DeleteAllClaim",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5074 //use the Http Variant
         }
       ]
     }
